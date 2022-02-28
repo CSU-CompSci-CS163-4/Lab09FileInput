@@ -1,7 +1,9 @@
 # Lab 09 - File Input
 This lab will focus upon String Manipulation and File Input. If you need to brush up on these topics, a small section will be at the lower portion of this document to catch you up on today's topics!
 
-When downloading this program for your use, make sure to download or pull from the [GitHub](https://github.com/CSU-CompSci-CS163-4/Lab09FileInput) to ensure that you have the correct file hierarchy/format needed for this program.
+When downloading this program for your use, make sure to download or pull from the [GitHub](https://github.com/CSU-CompSci-CS163-4/Lab09FileInput) to ensure that you have the correct file hierarchy/format needed for this program. For instance, your files should look like this: ![Files](./Files.jpg "Files") 
+
+(Don't mind the colors, they are for GitHub version control.)
 
 For ease of access, here is the [javadoc](https://www.cs.colostate.edu/~cs163/javadoc/lab09/package-summary.html).
 
