@@ -3,6 +3,7 @@ This lab will focus upon String Manipulation and File Input. If you need to brus
 
 When downloading this program for your use, make sure to download or pull from the [GitHub](https://github.com/CSU-CompSci-CS163-4/Lab09FileInput) to ensure that you have the correct file hierarchy/format needed for this program. For instance, your files should look like this: ![Files](./Files.jpg "Files") 
 
+If this is not the configuration of your files you **WILL** run into problems.
 (Don't mind the colors, they are for GitHub version control.)
 
 For ease of access, here is the [javadoc](https://www.cs.colostate.edu/~cs163/javadoc/lab09/package-summary.html).
@@ -30,5 +31,68 @@ Make sure to submit your `ShippingMain.java` file to zyBooks and then show your 
 
 # Additional Information
 ## String Manipulation
+Strings are incredibly useful for storing multiple characters, they also have some methods that allow us to manipulate and query those characters.
+### String.substring(beginIndex, endIndex)
+is an incredibly handy method that allows us to slice up our `String` objects into more useful bits. An odd trait of `substring()` is that the first indicates is inclusive, meaning when we slice our `String`, we include that index. The `endIndex` is exclusive and will not include that index in our slice. Also, `endIndex` is optional, and if it is not included, the slice will span from `beginIndex` to the length of your `String` object.
+
+For example:
+``` java
+String pokemon = "Giratina";
+String name = pokemon.substring(4);
+
+System.out.println(pokemon); //Prints "Giratina"
+System.out.println(name); //Prints "tina"
+
+String song = "Duckworth";
+String animal = song.substring(0, song.indexOf("w"));
+
+System.out.println(song); //Prints "Duckworth"
+System.out.println(animal); //Prints "Duck"
+```
+
+### String Querying
+Finding characters, testing if `String`s are equal, or testing what a `String` starts with a useful interactions that we can already do with `String`s.
+
+`String.contains(String)` is a useful function that returns a boolean when the first `String` contains the second `String`.
+``` java
+String bk = "Royale With Cheese";
+String cheese = "Cheese";
+
+System.out.println(bk.contains(cheese)); //Prints true
+```
+
+`String.startsWith(String)` is a method returns a boolean, true if the first `String` contains, at the the beginning, the second `String`.
+``` java
+String country = "Portugal";
+
+System.out.println(country.startsWith("Port")); //Prints true
+```
 
 ## File Input
+File Input is quite a large subject to go over in a lab README, so look at your notes/lecture notes to get the full understanding, but I will provide some helpful methods.
+
+`File` objects can be needed as a parameter for `Scanner` objects to read the selected file, like so: (Assume we have access to this file)
+``` java
+File newFile = new File("testfile.txt") //Parameter is the file path.
+Scanner scnr = new scnr(newFile);
+
+String firstFileLine = scnr.nextLine();
+```
+
+Once you have a `Scanner` that is associated with your file, you can use methods like `Scanner.nextLine()` and `Scanner.next()` to actually read from your selected file.
+
+If we had this file name `test.txt`:
+```
+Hi there
+Nice to meet ya!
+```
+And this snippet will have an associated `Scanner` read the file:
+``` java
+String firstLine = scnr.nextLine() //Equals "Hi there"
+String firstWord = scnr.next(); //Equals "Nice"
+String secondWord = scnr.next(); //Equals "to"
+String thirdPart = scnr.nextLine(); //Equals "meet ya!"
+```
+I find it easiest to imagine that the `Scanner` constantly has a pointer in the file that it increments differently, depending on if `next()` or `nextLine()` is called.
+
+Thanks for coming to my TED talk.
