@@ -6,7 +6,7 @@ When downloading this program for your use, make sure to download or pull from t
 If this is not the configuration of your files you **WILL** run into problems.
 (Don't mind the colors, they are for GitHub version control.)
 
-For ease of access, here is the [javadoc](https://www.cs.colostate.edu/~cs163/javadoc/lab09/package-summary.html).
+For ease of access, here is the [javadoc](https://csu-compsci-cs163-4.github.io/Lab09FileInput/package-summary.html).
 
 ## Pre-Step: Walkthrough
 Before beginning this assignment, it is highly recommended to start in `ShippingMain`'s `main` function and try to walkthrough the program. The `Product` and `ShippingManifest` classes are provided as containers for data, they also have their own methods so it will help to check out those classes.
@@ -27,7 +27,7 @@ Once you have completed implementing, try to test your `createProduct(Scanner)` 
 For testing the next method you implemented, `go(Scanner, ShippingManifest)`, this is up to you to test manually. So try to run through your program a couple of times before turning it in.
 
 ## Step 5: Turning In
-Make sure to submit your `ShippingMain.java` file to zyBooks and then show your TA your self-explanation and pseudo-code if you did it. 
+Make sure to submit your `ShippingMain.java` file to zyBooks and then show your TA your self-explanation and pseudo-code if you did it. Online students do not have the option to submit their self-explanations but they are still highly recommended to complete to better your understanding of the code. 
 
 # Additional Information
 ## String Manipulation
